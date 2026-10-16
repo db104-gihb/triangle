@@ -54,16 +54,16 @@ An equilateral triangle has three equal angles of
 
 | Test | Copilot-suggested? | Decision | Why |
 |------|--------------------|----------|-----|
-| [Actual test name] | Yes/No | Kept/Edited/Rejected | [What you checked] |
-| [Actual test name] | Yes/No | Kept/Edited/Rejected | [What you checked] |
-| [Actual test name] | Yes/No | Kept/Edited/Rejected | [What you checked] |
-
+| test_equilateral_triangle | Yes | Kept | Verified that three equal sides return "Equilateral" as required. |
+| test_invalid_triangle | Yes | Edited | Checked that zero, negative, and invalid side lengths return "Invalid" without errors. |
+| test_right_triangle | Yes | Edited | Checked that the test uses non-integer side lengths to verify right-triangle detection with a numerical tolerance instead of exact equality. |
 ## Acceptance Criteria
 
-1. [Insert your first acceptance criterion.]
-2. [Insert your second acceptance criterion.]
-3. [Optional third acceptance criterion.]
+1. **Triangle Validation:** When a customer enters three side lengths, the system must correctly identify whether they form a valid triangle. If any side is zero or negative, or the sum of two sides is less than or equal to the third, the system must return "Invalid" without crashing.
 
+2. **Triangle Classification:** When a customer enters three valid side lengths, the system must correctly classify the triangle as "Equilateral," "Isosceles," or "Scalene" based on the lengths of its sides.
+
+3. **Right Triangle Detection:** When a customer enters side lengths that satisfy the Pythagorean theorem within a numerical tolerance, the system must identify the triangle as a right triangle by adding "Right" before its classification, such as "Right Scalene."
 ## AI-Use Disclosure
 
 GitHub Copilot was used to help draft unit tests
